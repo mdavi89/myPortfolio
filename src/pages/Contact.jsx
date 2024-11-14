@@ -5,7 +5,8 @@ function Contact() {
   // Here we set two state variables for firstName and lastName using `useState`
   const [user, setUser] = useState({
     email: '',
-    userName: ''
+    userName: '',
+    comment: ''
   });
 
   const handleInputChange = (e) => {
@@ -24,7 +25,8 @@ function Contact() {
     if (user) {
     setUser({
       email: '',
-      userName: ''
+      userName: '',
+      comment: ''
     });
     }
   };
@@ -48,6 +50,13 @@ function Contact() {
           onChange={handleInputChange}
           type="email"
           placeholder="Email"
+        />
+        <input
+          value={user.comment}
+          name="comment"
+          onChange={handleInputChange}
+          type="textarea"
+          placeholder="Comment"
         />
         <button type="submit">
           Submit

@@ -1,13 +1,11 @@
 import { useState } from 'react';
-import '../styles/style.css';
 
 function Contact() {
   // Here we set two state variables for firstName and lastName using `useState`
   const [user, setUser] = useState({
     email: '',
-    userName: '',
-    comment: ''
-  });
+    userName: ''
+  })
 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
@@ -22,13 +20,7 @@ function Contact() {
     e.preventDefault();
 
     // Alert the user their first and last name, clear the inputs
-    if (user) {
-    setUser({
-      email: '',
-      userName: '',
-      comment: ''
-    });
-    }
+    setUser('');
   };
 
   return (
@@ -38,25 +30,18 @@ function Contact() {
       </h1>
       <form className="form" onSubmit={handleFormSubmit}>
         <input
-          value={user.userName}
+          value={userName}
           name="userName"
           onChange={handleInputChange}
           type="text"
           placeholder="Name"
         />
         <input
-          value={user.email}
+          value={email}
           name="email"
           onChange={handleInputChange}
           type="email"
           placeholder="Email"
-        />
-        <input
-          value={user.comment}
-          name="comment"
-          onChange={handleInputChange}
-          type="textarea"
-          placeholder="Comment"
         />
         <button type="submit">
           Submit

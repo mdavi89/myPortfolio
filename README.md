@@ -21,7 +21,7 @@ This project is licensed under the MIT license.
   ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
   ## Contributing
-  N/A
+  A large portion of the code was done with ChatGPT and some provided code from my bootcamp
 
   ## Tests
   N/A

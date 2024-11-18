@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #e9e5e5;
+}
+
+.footer-gif {
+  width: 60px;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.footer-gif:hover {
+  transform: scale(1.1);
+}

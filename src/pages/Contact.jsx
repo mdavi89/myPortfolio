@@ -20,7 +20,7 @@ function Contact() {
     e.preventDefault();
 
     // Alert the user their first and last name, clear the inputs
-    setUser('');
+    setUser({ email: '', userName: '' })
   };
 
   return (
@@ -30,14 +30,14 @@ function Contact() {
       </h1>
       <form className="form" onSubmit={handleFormSubmit}>
         <input
-          value={userName}
+          value={user.userName}
           name="userName"
           onChange={handleInputChange}
           type="text"
           placeholder="Name"
         />
         <input
-          value={email}
+          value={user.email}
           name="email"
           onChange={handleInputChange}
           type="email"
